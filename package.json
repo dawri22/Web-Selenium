@@ -1,0 +1,21 @@
+{
+  "name": "selenium",
+  "version": "1.0.0",
+  "description": "Selenium Example proyect",
+  "main": "firstText.js",
+  "scripts": {
+    "test": "mocha --no-timeouts firstTest --reporter mochawesome --require mochawesome/register"
+  },
+  "author": "Dawrin",
+  "license": "ISC",
+  "keywords": [],
+  "dependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.1.0",
+    "mochawesome": "^7.1.3",
+    "selenium-webdriver": "^4.7.0"
+  },
+  "devDependencies": {
+    "chromedriver": "^108.0.0"
+  }
+}
