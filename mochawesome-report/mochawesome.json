@@ -1,0 +1,178 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-04T02:40:42.909Z",
+    "end": "2022-12-04T02:41:02.062Z",
+    "duration": 19153,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "307ac482-0b2c-4632-8f17-6a60ace2c84a",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2120a1bf-be2f-4412-b490-40f45d36a536",
+          "title": "agregar editorial",
+          "fullFile": "C:\\Users\\dawri\\Desktop\\Seleniun\\firstTest.js",
+          "file": "\\firstTest.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "succesfully adds a todo to editorial",
+              "fullTitle": "agregar editorial succesfully adds a todo to editorial",
+              "timedOut": false,
+              "duration": 5167,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let driver = await new Builder().forBrowser(Browser.EDGE).build();\n    //abrir pagina\n    await driver.get(\"http://localhost:5001/editorials\");\n\n    //darle click al boton de crear\n    await driver.findElement(By.id(\"btn-editorial-save\")).click();\n\n    //llenar formulario\n    await driver.findElement(By.name(\"name\")).sendKeys(\"Editorial San pedro\");\n    await driver.findElement(By.name(\"phone\")).sendKeys(\"8295187976\");\n    await driver.findElement(By.name(\"country\")).sendKeys(\"Rep Dom\");\n\n\n    //tomar capture del editorial\n    driver.takeScreenshot().then(\n  function(image, err){\n      fsp.writeFile('./images/editorial.png', image, 'base64', function(err){\n       console.log(err);\n      });\n  }\n    )\n\n    //Guardar\n    await driver.findElement(By.id(\"btn-save-editorial\")).click();\n\n\n    //tomar captura de todo\n    driver.takeScreenshot().then(\n  function(image, err){\n      fsp.writeFile('./images/editorial1.png', image, 'base64', function(err){\n       console.log(err);\n      });\n  }\n    )\n\n    driver.close();",
+              "err": {},
+              "uuid": "7fd679f8-2f1b-4f3e-8d9d-59815cbdcedd",
+              "parentUUID": "2120a1bf-be2f-4412-b490-40f45d36a536",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7fd679f8-2f1b-4f3e-8d9d-59815cbdcedd"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5167,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        },
+        {
+          "uuid": "3f7aa3d9-6dbb-4185-9f77-f6fbd5a5f003",
+          "title": "agregar autor",
+          "fullFile": "C:\\Users\\dawri\\Desktop\\Seleniun\\firstTest.js",
+          "file": "\\firstTest.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "succesfully adds a todo to autor",
+              "fullTitle": "agregar autor succesfully adds a todo to autor",
+              "timedOut": false,
+              "duration": 6624,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let driver = await new Builder().forBrowser(Browser.EDGE).build();\n//abrir pagina\nawait driver.get(\"http://localhost:5001/authors\");\n//darle click al boton de crear\nawait driver.findElement(By.id(\"btn-autor-save\")).click();\n//llenar formulario\nawait driver.findElement(By.name(\"name\")).sendKeys(\"Dawrin Peguero Alvarez\");\nawait driver.findElement(By.name(\"email\")).sendKeys(\"dawri9175@gmail.com\");\n//tomar capture del autor\ndriver.takeScreenshot().then(\n    function(image, err){\n        fsp.writeFile('./images/autor.png', image, 'base64', function(err){\n         console.log(err);\n        });\n    }\n)\n//Guardar\nawait driver.findElement(By.id(\"btn-save-autor\")).click();\n\n//tomar captura de todo\ndriver.takeScreenshot().then(\n    function(image, err){\n        fsp.writeFile('./images/autor1.png', image, 'base64', function(err){\n         console.log(err);\n        });\n    }\n)\n//salir\ndriver.close();",
+              "err": {},
+              "uuid": "19c76228-936c-4a3e-b14a-63e9a3dd6232",
+              "parentUUID": "3f7aa3d9-6dbb-4185-9f77-f6fbd5a5f003",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "19c76228-936c-4a3e-b14a-63e9a3dd6232"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6624,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        },
+        {
+          "uuid": "7ffa8acf-91ee-4657-a9eb-791e23d09a19",
+          "title": "agregar categoria",
+          "fullFile": "C:\\Users\\dawri\\Desktop\\Seleniun\\firstTest.js",
+          "file": "\\firstTest.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "succesfully adds a todo to categoria",
+              "fullTitle": "agregar categoria succesfully adds a todo to categoria",
+              "timedOut": false,
+              "duration": 7339,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let driver = await new Builder().forBrowser(Browser.EDGE).build();\n//abrir pagina\nawait driver.get(\"http://localhost:5001/categories\");\n//darle click al boton de crear\nawait driver.findElement(By.id(\"btn-categoria-save\")).click();\n//llenar formulario\nawait driver.findElement(By.name(\"name\")).sendKeys(\"Ficcion\");\nawait driver.findElement(By.name(\"description\")).sendKeys(\"Soy la categoria de ficcion\");\n//tomar capture del autor\ndriver.takeScreenshot().then(\n    function(image, err){\n        fsp.writeFile('./images/categoria.png', image, 'base64', function(err){\n         console.log(err);\n        });\n    }\n)\n//Guardar\nawait driver.findElement(By.id(\"btn-save-categoria\")).click();\n\n\n//tomar captura de todo\ndriver.takeScreenshot().then(\n    function(image, err){\n        fsp.writeFile('./images/categoria1.png', image, 'base64', function(err){\n         console.log(err);\n        });\n    }\n)\n//salir\ndriver.close();",
+              "err": {},
+              "uuid": "0527323c-d7f6-4831-ac2c-b7d0e8987eb1",
+              "parentUUID": "7ffa8acf-91ee-4657-a9eb-791e23d09a19",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0527323c-d7f6-4831-ac2c-b7d0e8987eb1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7339,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.1.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
